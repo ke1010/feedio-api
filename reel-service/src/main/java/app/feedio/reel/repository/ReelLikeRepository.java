@@ -1,4 +1,7 @@
 package app.feedio.reel.repository;
 
-public class LikeRepository {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ReelLikeRepository {
 }
