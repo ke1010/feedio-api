@@ -1,9 +1,6 @@
 package app.feedio.reel.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +11,12 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
+@Table(name = "like_db")
 public class ReelLike {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    int userId;
+    Long userId;
     Long reelId;
     boolean isLiked;
 

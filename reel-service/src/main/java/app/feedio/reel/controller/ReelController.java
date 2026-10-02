@@ -17,7 +17,7 @@ public class ReelController {
   @Autowired
     ReelService reelService;
 
-  @GetMapping("/get-reel")
+  @GetMapping("/get-reel/{userId}")
   public ResponseEntity<ReelResponse> getReels(@PathVariable Long userId){
     return new ResponseEntity<>(reelService.getReel(userId), HttpStatus.OK);
   }

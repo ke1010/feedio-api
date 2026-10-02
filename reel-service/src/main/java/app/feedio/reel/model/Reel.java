@@ -13,10 +13,11 @@ public class Reel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+     Long id;
     String videoUrl;
     int likes;
     int comments;
     String caption;
+     String createdAt;
 
 }

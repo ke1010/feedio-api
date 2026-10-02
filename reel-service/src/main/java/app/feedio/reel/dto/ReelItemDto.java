@@ -13,5 +13,6 @@ public class ReelItemDto {
     int likes;
     int comments;
     String caption;
+    boolean isLiked;
 
 }
