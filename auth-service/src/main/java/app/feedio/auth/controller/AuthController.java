@@ -16,10 +16,12 @@ public class AuthController {
     @Autowired
     AuthService authService;
 
-    @PostMapping("/send-otp/{phoneNo}")
-    public ResponseEntity<SendOtpResponse> getOtpSent(@PathVariable String phoneNo){
+    @PostMapping("/send-otp")
+    public ResponseEntity<SendOtpResponse> getOtpSent(@RequestParam("phone") String phoneNo){
         return new ResponseEntity<>(authService.sendOtp(phoneNo), HttpStatus.OK);
     }
+
+
 
     @PostMapping("/verify-otp")
     public ResponseEntity<VerifyOtpResponse> getOtpSent(@RequestBody VerifyOtpRequest verifyOtpRequest){
