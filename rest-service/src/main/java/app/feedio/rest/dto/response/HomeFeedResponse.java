@@ -13,7 +13,8 @@ import java.util.List;
 @Setter
 @Builder
 public class HomeFeedResponse {
-
+    boolean success;
+    String message;
     HeaderDto headerDto;
     List<SectionDto> sectionDto;
     PaginationDto paginationDto;

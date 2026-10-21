@@ -26,7 +26,7 @@ public class HomeFeedService {
         List<SectionDto> sectionDtoList = new ArrayList<>();
         sectionDtoList.add(new SectionDto(1,"Carousel", categoryItemDtoList));
         sectionDtoList.add(new SectionDto(2,"RestaurantList", restaurantItemDtoList));
-        return  new HomeFeedResponse(headerDto, sectionDtoList, paginationDto);
+        return  new HomeFeedResponse(true, "Fetched successfully",headerDto, sectionDtoList, paginationDto);
     }
 
 }
