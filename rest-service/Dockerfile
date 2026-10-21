@@ -14,7 +14,7 @@ FROM eclipse-temurin:26-jre
 WORKDIR /app
 
 # Since it's a multi-module setup, copy the built jar from the auth-service target folder
-COPY --from=build /app/rest-service/target/*.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
