@@ -3,7 +3,7 @@ FROM maven:4.0.0-rc-7-eclipse-temurin-26 AS build
 WORKDIR /app
 
 # Copy the entire project codebase over
-COPY . .
+COPY rest-service/pom.xml
 
 # Force a clean production package build while skipping unit tests
 RUN mvn clean package -DskipTests
