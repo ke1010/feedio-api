@@ -1,5 +1,8 @@
 package app.feedio.rest.util;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public final class LocationUtil {
 
     private static final int EARTH_RADIUS_KM = 6371;
@@ -22,8 +25,10 @@ public final class LocationUtil {
                 * Math.sin(dLon / 2) * Math.sin(dLon / 2);
 
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-        return EARTH_RADIUS_KM * c;
+        double distance = EARTH_RADIUS_KM * c;
+        return BigDecimal.valueOf(distance)
+                .setScale(2, RoundingMode.HALF_UP)
+                .doubleValue();
     }
 
     /**

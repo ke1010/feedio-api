@@ -9,6 +9,7 @@ public class CategoryTransformer {
     public static CategoryItemDto categoryTransformerToCategoryItemDto(Category dishes){
         return CategoryItemDto.builder()
                 .name(dishes.getName())
+                .imgUrl(dishes.getImgUrl())
                 .build();
     }
 }
