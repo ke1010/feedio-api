@@ -39,7 +39,7 @@ public class ReelService {
              boolean isLiked = likedReelIdSet.contains(reel1.getId());
                 reelItemDtoList.add(ReelTransformer.reelTransformerToReelItemdTO(reel1, isLiked));
             }
-           return new ReelResponse(reelItemDtoList, reelPage.isLast());
+           return new ReelResponse(true, "fetched successfully", reelItemDtoList, reelPage.isLast());
 
      }
 

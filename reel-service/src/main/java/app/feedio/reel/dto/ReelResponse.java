@@ -11,7 +11,8 @@ import java.util.List;
 @Setter
 @Builder
 public class ReelResponse {
-
+    boolean success;
+    String message;
     List<ReelItemDto> reelItemDtos;
     boolean isLast;
 
