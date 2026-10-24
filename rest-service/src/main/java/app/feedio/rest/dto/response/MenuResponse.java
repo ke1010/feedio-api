@@ -13,7 +13,8 @@ import java.util.List;
 @Setter
 @Builder
 public class MenuResponse {
-
+    boolean success;
+    String message;
     private RestMenuHeaderDto restMenuHeaderDto;
  List<MenuSectionDto> menuSectionDto;
 

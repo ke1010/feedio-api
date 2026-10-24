@@ -46,7 +46,7 @@ public class MenuService {
             menuSectionDtoList.add(new MenuSectionDto(sectionId++, entry.getKey(), entry.getValue()));
         }
 
-        return new  MenuResponse(restMenuHeaderDto, menuSectionDtoList);
+        return new  MenuResponse(true, "fetched succesfully", restMenuHeaderDto, menuSectionDtoList);
     }
 
 }
