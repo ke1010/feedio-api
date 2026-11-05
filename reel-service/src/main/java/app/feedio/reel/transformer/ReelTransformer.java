@@ -19,6 +19,7 @@ public class ReelTransformer {
 
     public static CommentItemDto reelCommentTransformerToCommentItemdTO(ReelComment reelComment){
         return CommentItemDto.builder()
+                .id(reelComment.getId())
                 .reelId(reelComment.getReelId())
                 .userId(reelComment.getUserId())
                 .content(reelComment.getContent())

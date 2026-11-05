@@ -13,7 +13,9 @@ import java.util.List;
 @Builder
 public class ReelCommentResponse {
 
-    List<CommentItemDto> commentItemDtoList;
+    boolean success;
+    String message;
+    List<CommentItemDto> commentList;
     boolean isLast;
 
 }

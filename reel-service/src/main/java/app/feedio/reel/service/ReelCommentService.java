@@ -37,7 +37,7 @@ public class ReelCommentService {
             commentItemDtoList.add(ReelTransformer.reelCommentTransformerToCommentItemdTO(reelCmnt));
         }
 
-        return new ReelCommentResponse(commentItemDtoList, reelCommentSlice.isLast());
+        return new ReelCommentResponse(true, "fetched successfully", commentItemDtoList, reelCommentSlice.isLast());
 
     }
 
@@ -52,6 +52,8 @@ public class ReelCommentService {
          reel.setComments(reel.getComments()+1);
        return ReelTransformer.reelCommentTransformerToCommentItemdTO(reelComment);
     }
+
+
 
     public CommentItemDto deleteComment(Long reelId, Long userId, Long commentId){
         ReelComment reelComment = reelCommentRepository.findById(commentId)
